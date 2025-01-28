@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasbih Counter</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: rgb(15, 72, 53);
+      color: aliceblue;
+      font-family: Arial, sans-serif;
+      box-sizing: border-box;
+    }
+    .image img {
+      height: 100px;
+      width: 150px;
+      position: absolute;
+      top: 100px;
+      left: 28vw;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 200px;
+    }
+    h1 {
+      color: bisque;
+      font-size: 50px;
+    }
+    .box {
+      border: 2px solid white;
+      padding: 20px;
+      border-radius: 20px;
+    }
+    #textbox {
+      border-radius: 10px;
+      width: 60px;
+      height: 30px;
+      margin: 3px;
+      text-align: center;
+      justify-content: center;
+      font-size: 25px;
+      border: 2px solid red;
+    }
+    .inputText {
+      border: 3px dashed black;
+      margin: 10px 40px;
+      border-radius: 10px;
+    }
+
+    #incrementButton {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      margin-left: 50px;
+      background-color: brown;
+    }
+    #resetButton {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      background-color: red;
+      margin-left: 10px;
+    }
+    .footer {
+      width: 100vw;
+      background-color: rgb(15, 72, 53);
+      color: #ecf0f1;
+      padding: 20px 0;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .contact-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      color: #ecf0f1;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #1abc9c;
+    }
+
+    .copyright-section p {
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    @media (min-width: 768px) {
+      .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .contact-section h3 {
+        font-size: 1.8rem;
+      }
+    }
+    @media(min-width : 1000px){
+        .image{
+            display: none;
+        }
+    }
+  </style>
+  <body>
+    <div class="image">
+      <img src="./madina sharif image.png" alt="" />
+    </div>
+    <div class="container">
+      <h1>تسبیح کاؤنٹر</h1>
+      <div class="box">
+        <div class="inputText">
+          <input type="text" id="textbox" value="0" />
+        </div>
+        <div class="buttons">
+          <button id="incrementButton" onclick="incrementbyOne()"></button>
+          <button id="resetButton" onclick="reset()"></button>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="contact-section">
+          <div class="social-links">
+            <a href="https://github.com/SajidAli92" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://linkedin.com/in/sajidali2ns" target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="https://instagram.com/inshacle.7" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://wa.me/917033214254?text=Hello!%20I%20want%20to%20know%20more%20about%20your%20Tasbih%20Counter."
+              target="_blank"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+        <div class="copyright-section">
+          <p>&copy; 2025 Tasbih Counter. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const inputbox = document.querySelector("#textbox");
+
+      function incrementbyOne() {
+        inputbox.value++;
+      }
+      function reset() {
+        inputbox.value = 0;
+      }
+    </script>
+  </body>
+</html>
